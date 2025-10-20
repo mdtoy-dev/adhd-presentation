@@ -266,7 +266,11 @@ const addPrintButton = () => {
         });
         
         printButton.addEventListener('click', () => {
-            window.print();
+            // Download the PDF file
+            const link = document.createElement('a');
+            link.href = 'bmj-2024-083658.full.pdf';
+            link.download = 'bmj-2024-083658.full.pdf';
+            link.click();
         });
         
         hero.appendChild(printButton);
