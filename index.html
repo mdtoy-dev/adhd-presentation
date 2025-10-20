@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Critical Appraisal: ADHD Drug Treatment Target Trial Emulation (BMJ 2025)</title>
+    <meta name="description" content="Critical appraisal of Zhang et al., BMJ 2025: ADHD drug treatment and risks of suicidal behaviours, substance misuse, injuries, transport accidents, and criminality." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="site-title">Critical Appraisal</h1>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">🌓</button>
+      </div>
+      <div class="container">
+        <p class="site-subtitle">ADHD drug treatment and risk of suicidal behaviours, substance misuse, accidental injuries, transport accidents, and criminality: emulation of target trials (BMJ 2025;390:e083658)</p>
+        <p class="citation">Zhang L, Zhu N, Sjölander A, et al. BMJ 2025;390:e083658. DOI: <a href="https://dx.doi.org/10.1136/bmj-2024-083658" target="_blank" rel="noopener">10.1136/bmj-2024-083658</a></p>
+      </div>
+      <nav class="nav container" aria-label="Sections">
+        <ul>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#pico">PICO</a></li>
+          <li><a href="#methods">Methods</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#bias">Risk of Bias</a></li>
+          <li><a href="#appraisal">Critical Appraisal</a></li>
+          <li><a href="#implications">Implications</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="container">
+      <section id="summary" class="card">
+        <h2>Bottom Line</h2>
+        <p><strong>Conclusion:</strong> In a nationwide Swedish cohort using a target trial emulation, initiating and sustaining ADHD pharmacotherapy was associated with <strong>lower rates</strong> of first occurrences of suicidal behaviours, substance misuse, transport accidents, and criminality; the estimate for first accidental injuries was <strong>not statistically significant</strong>. For <strong>recurrent events</strong>, reductions were observed across <strong>all five outcomes</strong>. Effects were generally <strong>larger among those with prior events</strong> and for <strong>stimulants</strong> versus non-stimulants.</p>
+      </section>
+
+      <section id="pico" class="card">
+        <h2>PICO</h2>
+        <ul class="kv">
+          <li><span class="k">Population</span><span class="v">Swedish residents aged 6-64 years with incident ADHD diagnosis (2007-2018); n=148,581 (41.3% female; median age 17.4)</span></li>
+          <li><span class="k">Intervention</span><span class="v">Start ADHD drug treatment within 3 months of diagnosis and sustain treatment</span></li>
+          <li><span class="k">Comparator</span><span class="v">Do not start ADHD drug treatment during follow-up ("non-initiation")</span></li>
+          <li><span class="k">Outcomes</span><span class="v">First and recurrent events over 2 years: suicidal behaviours, substance misuse, accidental injuries, transport accidents, criminality</span></li>
+          <li><span class="k">Design</span><span class="v">Target trial emulation with cloning, censoring, and inverse probability weighting (per-protocol analogue)</span></li>
+        </ul>
+      </section>
+
+      <section id="methods" class="card">
+        <h2>Key Methods</h2>
+        <ul>
+          <li>Linked national Swedish registers (Patient, Prescribed Drug, Cause of Death, Crime, LISA).</li>
+          <li>Incident ADHD (ICD-10 F90); excluded prevalent users (≥18 months washout).</li>
+          <li>Monthly adherence assessment; censor when deviating from assigned strategy.</li>
+          <li>Time-varying inverse probability of censoring weights with extensive baseline and monthly covariates; weights truncated at 99.5th percentile.</li>
+          <li>Weighted pooled logistic regression approximating incidence rate ratios; 500 bootstrap resamples for CIs.</li>
+          <li>Secondary: recurrent events; head-to-head stimulant vs non-stimulant; subgroup by age, sex, prior events; sensitivity (6-month grace, allow switches); negative control (type 1 diabetes).</li>
+        </ul>
+      </section>
+
+      <section id="results" class="card">
+        <h2>Results</h2>
+        <div class="grid">
+          <div>
+            <h3>First events (per 1000 person-years)</h3>
+            <table class="data">
+              <thead>
+                <tr><th>Outcome</th><th>Initiation</th><th>Non-initiation</th><th>IRR (95% CI)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Suicidal behaviours</td><td>14.5</td><td>16.9</td><td>0.83 (0.78–0.88)</td></tr>
+                <tr><td>Substance misuse</td><td>58.7</td><td>69.1</td><td>0.85 (0.83–0.87)</td></tr>
+                <tr><td>Accidental injuries</td><td>88.5</td><td>90.1</td><td>0.98 (0.96–1.01)</td></tr>
+                <tr><td>Transport accidents</td><td>24.0</td><td>27.5</td><td>0.88 (0.82–0.94)</td></tr>
+                <tr><td>Criminality</td><td>65.1</td><td>76.1</td><td>0.87 (0.83–0.90)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3>Recurrent events</h3>
+            <table class="data">
+              <thead>
+                <tr><th>Outcome</th><th>Initiation</th><th>Non-initiation</th><th>IRR (95% CI)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Suicidal behaviours</td><td>22.7</td><td>24.3</td><td>0.85 (0.77–0.93)</td></tr>
+                <tr><td>Substance misuse</td><td>166.1</td><td>201.5</td><td>0.75 (0.72–0.78)</td></tr>
+                <tr><td>Accidental injuries</td><td>119.4</td><td>122.8</td><td>0.96 (0.92–0.99)</td></tr>
+                <tr><td>Transport accidents</td><td>31.6</td><td>37.2</td><td>0.84 (0.76–0.91)</td></tr>
+                <tr><td>Criminality</td><td>111.3</td><td>143.4</td><td>0.75 (0.71–0.79)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="note">Effects generally larger among individuals with prior events; stimulants favored over non-stimulants in head-to-head comparisons.</p>
+      </section>
+
+      <section id="bias" class="card">
+        <h2>Risk of Bias and Validity</h2>
+        <ul>
+          <li><strong>Confounding</strong>: Extensive covariate adjustment with time-varying IPCW; negative control outcome showed null association (IRR ≈1.06).</li>
+          <li><strong>Selection/Immortal time</strong>: Addressed via cloning and grace-period alignment; monthly censoring rules.</li>
+          <li><strong>Misclassification</strong>: Dispensation ≠ ingestion; could bias towards null.</li>
+          <li><strong>Measurement</strong>: Registers have high coverage/PPV; less severe outcomes may be missed.</li>
+          <li><strong>Generalizability</strong>: Swedish setting with high methylphenidate use; external validity may vary.</li>
+          <li><strong>Analysis</strong>: Per-protocol analogue informs effect of sustained treatment; effect sizes smaller than within-individual studies but more representative.</li>
+        </ul>
+      </section>
+
+      <section id="appraisal" class="card">
+        <h2>Critical Appraisal</h2>
+        <ul>
+          <li><strong>Strengths</strong>: Nationwide data; rigorous target trial emulation; robust sensitivity analyses; clinically relevant outcomes; subgroup and recurrence analyses; stimulant vs non-stimulant comparison.</li>
+          <li><strong>Limitations</strong>: No data on non-drug therapy; adherence/dose unobserved; potential residual confounding (severity, lifestyle); outcomes limited to medically/legally ascertained events; ADHD presentation not available.</li>
+          <li><strong>Direction of bias</strong>: Likely conservative for benefits (adherence misclassification, usual-care comparator, truncation of weights); residual confounding could bias in either direction but negative control reduces concern.</li>
+          <li><strong>Credibility</strong>: Pre-registered; RECORD-PE reporting; results align with RCT symptom efficacy and prior observational studies, with plausible attenuated magnitudes.</li>
+        </ul>
+      </section>
+
+      <section id="implications" class="card">
+        <h2>Clinical and Policy Implications</h2>
+        <ul>
+          <li>Supports initiating and sustaining ADHD pharmacotherapy to mitigate serious adverse outcomes, especially in those with prior events.</li>
+          <li>Stimulants appear preferable as first-line agents when not contraindicated.</li>
+          <li>Communicate that benefits on accidental injuries may be modest for first events but present for recurrences.</li>
+          <li>Need for pragmatic and representative trials addressing functional and safety outcomes over longer horizons.</li>
+        </ul>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container">
+          <p>Built for educational appraisal purposes. Sources: Zhang et al., BMJ 2025. This page summarises and critiques the openly licensed article content. License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
