@@ -1,0 +1,175 @@
+/* Base styles */
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --muted: #475569;
+  --card: #f8fafc;
+  --border: #e2e8f0;
+  --accent: #2563eb;
+  --accent-contrast: #ffffff;
+  --emphasis: #0ea5e9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --fg: #e5e7eb;
+    --muted: #94a3b8;
+    --card: #0f172a;
+    --border: #1f2937;
+    --accent: #60a5fa;
+    --accent-contrast: #0b1220;
+    --emphasis: #22d3ee;
+  }
+}
+
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --fg: #e5e7eb;
+  --muted: #94a3b8;
+  --card: #0f172a;
+  --border: #1f2937;
+  --accent: #60a5fa;
+  --accent-contrast: #0b1220;
+  --emphasis: #22d3ee;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  z-index: 1000;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(2,6,23,.6), rgba(2,6,23,0)), var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-inner {
+  display: grid;
+  gap: .5rem 1rem;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 1rem 0;
+}
+.site-title { margin: 0; font-size: 1.25rem; }
+.header-meta { grid-column: 1 / -1; }
+.study-title { margin: .25rem 0; font-weight: 600; }
+.citation { margin: 0; color: var(--muted); }
+
+.btn {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: 0;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+.btn:focus-visible { outline: 3px solid var(--emphasis); outline-offset: 2px; }
+
+.toc {
+  padding: .75rem 0;
+}
+.toc details {
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  background: var(--card);
+  padding: .5rem 1rem;
+}
+.toc ol {
+  margin: .5rem 0 0 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
+.card h2 { margin-top: 0; }
+.card.emphasis { border-color: var(--emphasis); }
+
+.picos dt {
+  font-weight: 700;
+}
+.picos dd {
+  margin: 0 0 .75rem 0;
+  color: var(--fg);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+th, td {
+  text-align: left;
+  padding: .5rem .5rem;
+  border-bottom: 1px solid var(--border);
+}
+th { background: color-mix(in srgb, var(--card) 90%, var(--fg) 10%); }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+.site-footer p {
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .header-inner { grid-template-columns: 1fr; }
+  .btn { justify-self: start; }
+}
+
+/* Print styles */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --muted: #333333;
+    --card: #ffffff;
+    --border: #cccccc;
+  }
+  .site-header, .toc, #themeToggle { display: none !important; }
+  .card { box-shadow: none; break-inside: avoid; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 90%; }
+}
